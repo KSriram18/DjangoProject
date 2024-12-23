@@ -18,7 +18,7 @@ def signup(request):
             data1= UserSerializer(all_data,many=True)
             serializer_data=data1.data[:]
             for value in serializer_data:
-                if value["email"]==email:
+                if value["Email"]==email:
                     return JsonResponse({'error': 'This email is already registered.'}, status=400)
             serialize_data=UserSerializer(data={"Username":username, "Email":email, "Password":password})
             if serialize_data.is_valid(): 
