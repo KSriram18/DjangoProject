@@ -6,4 +6,8 @@ urlpatterns = [
    path('login/', views.login,name="login"),
    path('confirmation/',views.confirmation,name="confirmation"),
    path('success/', views.success,name="success"),
+   path('allusers/',views.getalluserdetails),
+   path('singleuser/<pk>/',views.singleuserusingbyemail),
+   path('updateuser/<pk>/',views.UpdateUserdetails),
+   path('deleteuser/<pk>/',views.deleteUserdetails),
 ]
